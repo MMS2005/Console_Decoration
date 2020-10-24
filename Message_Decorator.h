@@ -52,22 +52,22 @@ namespace CDec
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
         }
-        void ErrorMessage(std::string& message, wchar_t fontfamily, int32_t fontxcoords, int32_t fontycoords)
+        void ErrorMessage(std::string& message, wchar_t fontfamily, int32_t fontwidth, int32_t fontheight)
         {
             SetConsoleTextAttribute(handle, ConsoleForeground::RED);
             font_info.FontFamily = fontfamily;
-            font_info.dwFontSize.X = fontxcoords;
-            font_info.dwFontSize.Y = fontycoords;
+            font_info.dwFontSize.X = fontwidth;
+            font_info.dwFontSize.Y = fontheight;
             SetCurrentConsoleFontEx(handle, FALSE, &font_info);
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
         }
-        void ErrorMessage(std::string& message, wchar_t fontfamily, int32_t fontxcoords, int32_t fontycoords, int32_t fontweight)
+        void ErrorMessage(std::string& message, wchar_t fontfamily, int32_t fontwidth, int32_t fontheight, int32_t fontweight)
         {
             SetConsoleTextAttribute(handle, ConsoleForeground::RED);
             font_info.FontFamily = fontfamily;
-            font_info.dwFontSize.X = fontxcoords;
-            font_info.dwFontSize.Y = fontycoords;
+            font_info.dwFontSize.X = fontwidth;
+            font_info.dwFontSize.Y = fontheight;
             SetCurrentConsoleFontEx(handle, FALSE, &font_info);
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
@@ -101,22 +101,23 @@ namespace CDec
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
         }
-        void SucessMessage(std::string& message, wchar_t fontfamily, int32_t fontxcoords, int32_t fontycoords)
+	 
+        void SucessMessage(std::string& message, wchar_t fontfamily, int32_t fontwith, int32_t fontheight)
         {
             SetConsoleTextAttribute(handle, ConsoleForeground::GREEN);
             font_info.FontFamily = fontfamily;
-            font_info.dwFontSize.X = fontxcoords;
-            font_info.dwFontSize.Y = fontycoords;
+            font_info.dwFontSize.X = fontwidth;
+            font_info.dwFontSize.Y = fontheight;
             SetCurrentConsoleFontEx(handle, FALSE, &font_info);
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
         }
-        void SucessMessage(std::string& message, wchar_t fontfamily, int32_t fontxcoords, int32_t fontycoords, int32_t fontweight)
+        void SucessMessage(std::string& message, wchar_t fontfamily, int32_t fontwidth, int32_t fontheight, int32_t fontweight)
         {
             SetConsoleTextAttribute(handle, ConsoleForeground::GREEN);
             font_info.FontFamily = fontfamily;
-            font_info.dwFontSize.X = fontxcoords;
-            font_info.dwFontSize.Y = fontycoords;
+            font_info.dwFontSize.X = fontwidth;
+            font_info.dwFontSize.Y = fontheight;
             SetCurrentConsoleFontEx(handle, FALSE, &font_info);
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
@@ -147,22 +148,23 @@ namespace CDec
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
         }
-        void WarnMessage(std::string& message, wchar_t fontfamily, int32_t fontxcoords, int32_t fontycoords)
+        void WarnMessage(std::string& message, wchar_t fontfamily, int32_t fontwidth, int32_t fontheight)
         {
             SetConsoleTextAttribute(handle, ConsoleForeground::YELLOW);
             font_info.FontFamily = fontfamily;
-            font_info.dwFontSize.X = fontxcoords;
-            font_info.dwFontSize.Y = fontycoords;
+            font_info.dwFontSize.X = fontwidth;
+            font_info.dwFontSize.Y = fontyheight;
             SetCurrentConsoleFontEx(handle, FALSE, &font_info);
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
         }
-        void WarnMessage(std::string& message, wchar_t fontfamily, int32_t fontxcoords, int32_t fontycoords, int32_t fontweight)
+	    //Font X Coords Param stats the X Coordinate Or the Witdh of the Font, Y States the Height of the Coords
+        void WarnMessage(std::string& message, wchar_t fontfamily, int32_t fontwidth, int32_t fontheight, int32_t fontweight)
         {
             SetConsoleTextAttribute(handle, ConsoleForeground::GREEN);
             font_info.FontFamily = fontfamily;
-            font_info.dwFontSize.X = fontxcoords;
-            font_info.dwFontSize.Y = fontycoords;
+            font_info.dwFontSize.X = fontwidth
+            font_info.dwFontSize.Y = fontheight;
             SetCurrentConsoleFontEx(handle, FALSE, &font_info);
             std::cout << "[" << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << "]";
             std::cout << message;
